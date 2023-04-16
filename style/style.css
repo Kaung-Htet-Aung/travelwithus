@@ -1,0 +1,229 @@
+body,html{
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+   
+}
+.ballon{
+    position: absolute;
+    top: 50px;
+}
+.ballon:nth-child(1){
+    top: 120px;
+    opacity: 0.5;
+    animation:wind 70s linear infinite ;
+}
+.ballon:nth-child(2){
+    right: 50px;
+    opacity: 0.5;
+    animation:windb45 60s linear infinite;
+}
+.ballon:nth-child(3){
+    top: 170px;
+    left: 180px;
+    opacity: 0.8;
+    animation:windb3 50s linear infinite ;
+}
+.ballon:nth-child(4){
+   right: 100px;
+   top: 100px;
+   opacity: 0.6;
+   animation:windb45 80s linear infinite;
+}
+.ballon:nth-child(5){
+    top:150px;
+    left: 340px;
+    opacity: 0.7;
+    animation:wind 90s linear infinite ;
+}
+
+#navbar ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    padding-top: 20px;
+  
+}
+.navitems{
+    display: flex;
+    justify-content: space-evenly;
+}
+#navbar li a{
+   
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    text-decoration: none;
+    font-size:12px;
+}
+
+
+.title{
+  position: absolute;
+  top: 24%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding-right:22px;
+  display: flex;
+  
+}
+.title li{
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    letter-spacing: 5px;
+    color: wheat;
+    animation:title 1s infinite linear 
+}
+.first-section{
+    width:100%;
+    height:700px;
+    background-position: center;
+    background:url('../Image/use.jpg');
+    background-attachment: fixed;
+    background-size:cover;
+    
+}
+.city-container{
+    margin-top: 10px;
+}
+.img{
+    position: absolute;
+    transform-origin: left;
+    transition: 1s;
+    z-index: 2;
+    transform: perspective(2000px) rotateY(0deg);
+    
+}
+.box{
+    width: 100%;
+    margin-left: 30px;
+    margin-bottom: 190px;
+}
+
+.content{
+        width: 300px;
+        height: 250px;
+        position: absolute;
+        transform-origin: left;
+        transition: 1s;
+        z-index: 1;
+        transform: perspective(2000px) rotateY(45deg);
+        background-color: pink;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: justify;
+}
+.box:hover .img{
+    transform: perspective(2000px) rotateY(-90deg);
+}
+.box:hover .content{
+    transform: perspective(2000px) rotateY(0deg);
+}
+@keyframes wind{
+    from{left: -100px;}
+    to{left:100%}
+}
+@keyframes windb3{
+    from{left:20px;}
+    to{left:100%}
+}
+@keyframes windb45{
+    from{right:50px}
+    to{right:100%}
+}
+
+@keyframes title {
+    0%{
+        color: #f8de49;
+        text-shadow: none;
+    }
+    15%{
+        color: #f8de49;
+        text-shadow: none;
+    }
+    20%{
+        color: #f8de49;
+        text-shadow: 0 0 7px #f8de49, 0 0 20px wheat
+    }
+    30%{
+        color: #f8de49;
+        text-shadow: none;
+    }
+    35%{
+        color: #f8de49;
+        text-shadow: 0 0 7px #f8de49, 0 0 20px wheat
+    }
+    60%{
+        color: #f8de49;
+        text-shadow: none;
+    }
+    65%{
+        color: #f8de49;
+        text-shadow: 0 0 7px #f8de49, 0 0 20px wheat
+    }
+    80%{
+        color: #f8de49;
+        text-shadow: none;
+    }
+
+    95%{
+        color: #f8de49;
+        text-shadow: 0 0 7px #f8de49, 0 0 20px wheat
+    }
+    100%{
+        color: #f8de49;
+        text-shadow: none;
+    }
+}
+
+.title li:nth-child(1){
+     animation-delay:.2s;
+}
+.title li:nth-child(2){
+    animation-delay: .4s;
+}
+.title li:nth-child(3){
+    animation-delay: .2s;
+}
+.title li:nth-child(4){
+    animation-delay: .4s;
+}
+.title li:nth-child(5){
+    animation-delay: .8s;
+}
+
+.title li:nth-child(7){
+    animation-delay: 1s;
+}
+.title li:nth-child(8){
+    animation-delay: 1.3s;
+}
+.title li:nth-child(9){
+    animation-delay: 2s;
+}
+.title li:nth-child(10){
+    animation-delay: 1.4s;
+}
+.title li:nth-child(11){
+    animation-delay: 2.6s;
+}
+.title li:nth-child(12){
+    animation-delay: 1.2s;
+}
+
+@media (max-width: 800px) {
+    .first-section{
+        background-size: 90em;
+    }
+
+    .city-container {
+      margin-top: -40px;
+      flex-direction: column;
+    }
+    .box {
+        margin-top: 100px;
+    }
+  }
